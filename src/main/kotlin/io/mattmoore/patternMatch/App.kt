@@ -5,7 +5,7 @@ package io.mattmoore.patternMatch
 data class Company(val name: String)
 data class Person(val firstName: String, val lastName: String, val company: Company)
 
-fun case(arg: Any): Person = TODO("Deal with later...")
+fun case(arg: Any?): Any? = arg
 
 fun main(args: Array<String>) {
   val person = Person("Matt", "Moore", Company("Rally"))
