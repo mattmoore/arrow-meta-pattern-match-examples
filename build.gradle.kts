@@ -18,6 +18,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.3.61")
     implementation("io.arrow-kt:arrow-annotations:0.10.5")
     implementation("com.github.jengelman.gradle.plugins:shadow:5.2.0")
+    //implementation(files("/Users/mattmoore/source/arrow-meta/idea-plugin/build/libs/idea-plugin-1.3.61-SNAPSHOT.jar"))
 }
 
 application {
@@ -28,6 +29,8 @@ application {
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         jvmTarget = "1.8"
-        freeCompilerArgs = listOf("-Xplugin=/Users/mattmoore/source/arrow-meta/compiler-plugin/build/libs/compiler-plugin-1.3.61-SNAPSHOT.jar")
+        freeCompilerArgs = listOf(
+          "-Xplugin=/Users/mattmoore/source/arrow-meta/compiler-plugin/build/libs/compiler-plugin-1.3.61-SNAPSHOT.jar"
+        )
     }
 }
